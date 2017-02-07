@@ -1,11 +1,16 @@
 public class TAInt implements TANumber{
 
     private int value_int;
+    private String name;
 
     public TAInt(){
 
-        value_int = 0;
+        name = "";
 
+    }
+
+    public TAInt(String s){
+        name =s;
     }
 
     public void evaluate(){
@@ -18,5 +23,10 @@ public class TAInt implements TANumber{
 
     protected int getValue(){
         return value_int;
+    }
+
+    public void list(){
+
+        System.out.print(name);
     }
 }
