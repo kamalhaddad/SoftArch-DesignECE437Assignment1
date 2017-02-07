@@ -18,10 +18,12 @@ public class TAInt implements TANumber{
     }
 
     public void set(int i){
+
         value_int = i;
     }
 
-    protected int getValue(){
+    public Integer getValue(){
+
         return value_int;
     }
 

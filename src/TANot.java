@@ -8,9 +8,15 @@ public class TANot extends TABool implements TABoolOps {
 
     }
 
-    void evaluate(){}
+    public void evaluate(){
 
-    protected Boolean getValue(){ return value_not;}
+        value_not = !operand.getValue();
+    }
+
+    public Boolean getValue(){
+
+        return value_not;
+    }
 
     public void list(){
         System.out.print("(~ ");

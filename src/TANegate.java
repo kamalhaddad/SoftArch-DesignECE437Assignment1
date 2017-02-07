@@ -13,12 +13,15 @@ public class TANegate implements TANumber, TAArithOps {
 
     }
 
-    protected Number getValue(){
+    public Number getValue(){
 
      return value_negate;
     }
 
-    void evaluate(){}
+    public void evaluate(){
+
+        value_negate = operand.getValue().doubleValue() * -1.0;
+    }
 
     public void list(){
 

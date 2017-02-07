@@ -15,11 +15,16 @@ public class TAPlus implements TANumber,TAArithOps{
         operand2 = b;
     }
 
-    Number getValue(){
+    public Number getValue(){
+
         return value_plus;
     }
 
-    void evaluate(){}
+    public void evaluate(){
+
+        value_plus = operand1.getValue().doubleValue() + operand2.getValue().doubleValue();
+
+    }
 
     public void list(){
 

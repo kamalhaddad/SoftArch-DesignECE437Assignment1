@@ -1,19 +1,23 @@
 import static java.lang.StrictMath.ceil;
 
-public class TACeiling extends TAInt implements TAArithOps{
+public class TACeiling implements TANumber,TAArithOps{
 
     int value_ceiling;
-    TADouble operand;
+    TANumber operand;
 
-    TACeiling(TADouble d){
+    TACeiling(TANumber d){
         operand = d;
     }
 
-    protected int getValue(){
+    public Integer getValue(){
+
         return value_ceiling;
     }
 
-    public void evaluate(){}
+    public void evaluate(){
+
+        value_ceiling = (int)(ceil((double)operand.getValue()));
+    }
 
     public void list(){
         System.out.print("( ceiling ");

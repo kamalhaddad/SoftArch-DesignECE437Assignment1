@@ -5,13 +5,16 @@ public class TADouble implements TANumber{
 
     public TADouble() {
 
+        name = "";
     }
 
     public TADouble(String s){
+
         name = s;
     }
 
     public void set(double d){
+
         value_double = d;
     }
 
@@ -19,11 +22,13 @@ public class TADouble implements TANumber{
 
     }
 
-    protected double getValue(){
+    public Double getValue(){
+
         return value_double;
     }
 
     public void list(){
+
         System.out.print(name);
     }
 

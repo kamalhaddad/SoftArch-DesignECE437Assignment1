@@ -4,24 +4,31 @@ public class TABool implements TAObject{
     private final String name;
 
     public TABool(){
+
         name = "";
     }
 
     public TABool(String s){
+
         name = s;
     }
 
     public void set(Boolean b){
+
         value_boolean = b;
     }
 
-    Boolean get(){
+    Boolean getValue(){
+
         return value_boolean;
     }
 
-    void evaluate(){}
+    public void evaluate(){
+
+    }
 
     public void list(){
+
         System.out.print(name);
     }
 }

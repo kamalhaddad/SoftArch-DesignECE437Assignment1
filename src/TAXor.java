@@ -9,9 +9,15 @@ public class TAXor extends TABool implements TABoolOps {
         operand2 = b;
     }
 
-    protected Boolean get() { return value_xor;}
+    public Boolean getValue() {
 
-    void evaluate(){}
+        return value_xor;
+    }
+
+    public void evaluate(){
+
+        value_xor = operand1.getValue() ^ operand2.getValue();
+    }
 
     public void list(){
 

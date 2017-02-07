@@ -14,11 +14,15 @@ public class TAMinus implements TANumber, TAArithOps {
 
     }
 
-    Number get(){
-        return value_minus;
+    public Number getValue(){
+
+         return value_minus;
     }
 
-    void evaluate(){}
+    public void evaluate(){
+
+        value_minus = operand1.getValue().doubleValue() - operand2.getValue().doubleValue();
+    }
 
     public void list(){
 

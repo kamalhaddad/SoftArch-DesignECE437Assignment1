@@ -1,6 +1,6 @@
 public class TAEquals extends TABool implements TABoolOps{
 
-    private int value_equals;
+    private Boolean value_equals;
     private TANumber operand1, operand2;
 
     TAEquals(TAInt a, TAInt b){
@@ -11,7 +11,15 @@ public class TAEquals extends TABool implements TABoolOps{
 
     }
 
-    protected int getValue(){ return value_equals;}
+    public Boolean getValue(){
+
+        return value_equals;
+    }
+
+    public void printstate(){
+
+        System.out.println(value_equals);
+    }
 
     public void list(){
 

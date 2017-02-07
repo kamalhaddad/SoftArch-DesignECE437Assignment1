@@ -9,9 +9,15 @@ public class TAOr extends TABool implements TABoolOps{
             operand2 = b;
         }
 
-        protected Boolean get() { return value_or;}
+        public Boolean getValue() {
 
-        void evaluate(){}
+            return value_or;
+        }
+
+        public void evaluate(){
+
+            value_or = operand1.getValue() || operand2.getValue();
+        }
 
         public void list(){
             System.out.print("(or ");

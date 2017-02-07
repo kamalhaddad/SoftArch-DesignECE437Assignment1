@@ -9,9 +9,17 @@ public class TAAnd extends TABool implements TABoolOps {
     }
 
 
-    protected Boolean getValue() { return value_and;}
+    Boolean getValue() { return value_and;}
 
-    void evaluate(){}
+    public void evaluate(){
+
+        value_and = operand1.getValue() && operand2.getValue();
+    }
+
+    public void printstate(){
+
+        System.out.println(value_and);
+    }
 
     public void list(){
 
@@ -19,7 +27,7 @@ public class TAAnd extends TABool implements TABoolOps {
         operand1.list();
         System.out.print(" ");
         operand2.list();
-        System.out.print(") ");
+        System.out.print(" )");
 
     }
 

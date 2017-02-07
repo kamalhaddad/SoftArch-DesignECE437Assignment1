@@ -1,4 +1,4 @@
-public class TAImplies extends TABool implements TANumber{
+public class TAImplies extends TABool implements TABoolOps{
 
     private Boolean value_implies;
     TABool operand1, operand2;
@@ -8,9 +8,22 @@ public class TAImplies extends TABool implements TANumber{
         operand2 = b;
     }
 
-    protected Boolean getValue() { return value_implies;}
+    public Boolean getValue() {
 
-    void evaluate(){}
+        return value_implies;
+    }
+
+    public void evaluate(){
+        if (operand1.getValue())
+             value_implies = operand2.getValue();
+        else
+            value_implies = true;
+    }
+
+    public void printstate(){
+
+        System.out.println(value_implies);
+    }
 
     public void list(){
 

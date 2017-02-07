@@ -1,20 +1,24 @@
 import static java.lang.StrictMath.floor;
 
-public class TAFloor implements TANumber, TAArithOps{
+public class TAFloor implements TANumber,TAArithOps{
 
     private int value_floor;
     TADouble operand;
 
     TAFloor(TADouble d){
-        operand = d;
 
+        operand = d;
     }
 
-    protected int get(){
+    public Integer getValue() {
+
         return value_floor;
     }
 
-    void evaluate(){}
+    public void evaluate(){
+
+        value_floor = (int)floor((double) operand.getValue());
+    }
 
     public void list(){
 

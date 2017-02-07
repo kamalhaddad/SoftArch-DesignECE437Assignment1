@@ -16,11 +16,15 @@ public class TAMultiply implements TANumber, TAArithOps {
     }
 
 
-    protected Number getValue(){
+    public Number getValue(){
+
         return value_multiply;
     }
 
-    void evaluate(){}
+    public void evaluate(){
+
+        value_multiply = operand1.getValue().doubleValue() * operand2.getValue().doubleValue();
+    }
 
     public void list(){
 

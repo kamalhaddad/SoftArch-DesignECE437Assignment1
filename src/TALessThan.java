@@ -1,6 +1,6 @@
 public class TALessThan extends TABool implements TABoolOps{
 
-    private Boolean state;
+    private Boolean value_lessthan;
     private TANumber operand1, operand2;
 
     TALessThan(TAInt a, TAInt b){
@@ -13,9 +13,18 @@ public class TALessThan extends TABool implements TABoolOps{
         operand2 = b;
     }
 
-    protected Boolean getValue() {return state;}
+    public Boolean getValue() {
 
-    void evaluate(){};
+        return value_lessthan;
+    }
+
+    public void evaluate(){
+
+        if(operand1.getValue().doubleValue() < operand2.getValue().doubleValue())
+            value_lessthan = true;
+        else
+            value_lessthan = false;
+    }
 
     public void list(){
 
@@ -24,5 +33,6 @@ public class TALessThan extends TABool implements TABoolOps{
         System.out.print(" ");
         operand2.list();
         System.out.print(" )");
+
     }
 }
