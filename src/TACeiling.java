@@ -8,7 +8,7 @@ public class TACeiling implements TAArithOps, TANumber{
 
     }
 
-    Integer get(){
+    protected Integer getValue(){
         return value_ceiling;
     }
 

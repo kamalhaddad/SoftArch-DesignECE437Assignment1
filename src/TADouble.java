@@ -14,7 +14,7 @@ public class TADouble implements TANumber{
 
     }
 
-    protected Double get(){
+    protected double getValue(){
         return value_double;
     }
 }

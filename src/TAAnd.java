@@ -6,7 +6,7 @@ public class TAAnd extends TABool implements TABoolOps {
     TAAnd(TABool a, TABool b) {}
 
 
-    Boolean get() { return value_and;}
+    protected Boolean getValue() { return value_and;}
 
     void evaluate(){}
 

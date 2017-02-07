@@ -9,5 +9,5 @@ public class TANot extends TABool implements TABoolOps {
 
     void evaluate(){}
 
-    protected Boolean get(){ return value_not;}
+    protected Boolean getValue(){ return value_not;}
 }

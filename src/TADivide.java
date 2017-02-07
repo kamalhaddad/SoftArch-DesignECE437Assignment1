@@ -4,14 +4,13 @@ public class TADivide implements TANumber, TAArithOps {
 
     TADivide(TAInt a, TAInt b){
 
-
     }
 
     TADivide(TADouble a, TADouble b){
 
     }
 
-    Number get(){
+    protected Number getValue(){
         return value_divide;
     }
 

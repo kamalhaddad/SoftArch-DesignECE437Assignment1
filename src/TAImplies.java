@@ -7,7 +7,7 @@ public class TAImplies extends TABool implements TANumber{
 
     }
 
-    Boolean get() { return value_implies;}
+    protected Boolean getValue() { return value_implies;}
 
     void evaluate(){}
 }

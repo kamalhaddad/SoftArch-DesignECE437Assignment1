@@ -4,15 +4,13 @@ public class TANegate implements TANumber, TAArithOps {
 
     TANegate(TAInt i){
 
-        value_negate = i.get() * -1;
     }
 
     TANegate(TADouble d){
 
-        value_negate = d.get() * -1.0;
     }
 
-    protected Number get(){
+    protected Number getValue(){
 
      return value_negate;
     }

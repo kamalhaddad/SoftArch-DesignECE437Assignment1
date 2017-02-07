@@ -12,7 +12,7 @@ public class TALessThan extends TABool implements TABoolOps{
 
 
 
-    protected Boolean get() {return state;}
+    protected Boolean getValue() {return state;}
 
     void evaluate(){};
 }

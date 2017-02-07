@@ -12,10 +12,11 @@ public class TAInt implements TANumber{
 
     }
 
-    public void set(Object o){
+    public void set(int i){
+        value_int = i;
     }
 
-    Integer get(){
+    protected int getValue(){
         return value_int;
     }
 }
