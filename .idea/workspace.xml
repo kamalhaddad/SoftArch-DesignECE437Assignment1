@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abe5b20c-4a1b-43e0-90c4-7cd2e5e6a299" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TAArray.java" afterPath="$PROJECT_DIR$/src/TAArray.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TAArrayAccess.java" afterPath="$PROJECT_DIR$/src/TAArrayAccess.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,11 +54,12 @@
       <file leaf-file-name="TAArrayAccess.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TAArrayAccess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+            <state relative-caret-position="210">
+              <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
               <folding>
                 <element signature="e#168#169#0" expanded="true" />
                 <element signature="e#228#229#0" expanded="true" />
+                <element signature="e#490#491#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -965,11 +966,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TAArrayAccess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        <state relative-caret-position="210">
+          <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
           <folding>
             <element signature="e#168#169#0" expanded="true" />
             <element signature="e#228#229#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
           </folding>
         </state>
       </provider>
