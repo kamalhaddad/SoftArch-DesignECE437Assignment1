@@ -4,7 +4,7 @@ public class TAArray<T extends TADataType> implements TADataType{
 
     private final String name;
     private int size;
-    private ArrayList<T> array;
+    ArrayList<T> array;
 
     TAArray(String s, T t, TAInt n) throws Exception {
 
@@ -21,6 +21,10 @@ public class TAArray<T extends TADataType> implements TADataType{
         size = n.getValue().intValue();
         array = new ArrayList<T>(size);
 
+    }
+
+    public int size(){
+        return size;
     }
 
     @Override
