@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abe5b20c-4a1b-43e0-90c4-7cd2e5e6a299" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TAAnd.java" afterPath="$PROJECT_DIR$/src/TAAnd.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TABool.java" afterPath="$PROJECT_DIR$/src/TABool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TACeiling.java" afterPath="$PROJECT_DIR$/src/TACeiling.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TAEquals.java" afterPath="$PROJECT_DIR$/src/TAEquals.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TAImplies.java" afterPath="$PROJECT_DIR$/src/TAImplies.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TAInt.java" afterPath="$PROJECT_DIR$/src/TAInt.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TALessThan.java" afterPath="$PROJECT_DIR$/src/TALessThan.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TANot.java" afterPath="$PROJECT_DIR$/src/TANot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TAOr.java" afterPath="$PROJECT_DIR$/src/TAOr.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TAXor.java" afterPath="$PROJECT_DIR$/src/TAXor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TANumber.java" afterPath="$PROJECT_DIR$/src/TANumber.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,11 +29,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TAXor.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TAXor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TAXor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="465">
               <caret line="31" column="36" lean-forward="false" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TADataType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TADataType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TANumber.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TANumber.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="44" lean-forward="false" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TABool.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/TABool.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="41" lean-forward="false" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -57,36 +78,6 @@
                 <element signature="e#138#139#0" expanded="true" />
                 <element signature="e#165#166#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TACeiling.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TACeiling.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TADivide.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TADivide.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TADouble.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TADouble.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="23" lean-forward="false" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -137,6 +128,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -160,7 +152,6 @@
         <option value="$PROJECT_DIR$/src/TAUnaryOps.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/TAObject.java" />
-        <option value="$PROJECT_DIR$/src/TANumber.java" />
         <option value="$PROJECT_DIR$/src/TAFloor.java" />
         <option value="$PROJECT_DIR$/src/TADivide.java" />
         <option value="$PROJECT_DIR$/src/TADouble.java" />
@@ -170,7 +161,6 @@
         <option value="$PROJECT_DIR$/src/TAPlus.java" />
         <option value="$PROJECT_DIR$/src/TACeiling.java" />
         <option value="$PROJECT_DIR$/src/TAInt.java" />
-        <option value="$PROJECT_DIR$/src/TABool.java" />
         <option value="$PROJECT_DIR$/src/TAAnd.java" />
         <option value="$PROJECT_DIR$/src/TAEquals.java" />
         <option value="$PROJECT_DIR$/src/TAImplies.java" />
@@ -178,6 +168,9 @@
         <option value="$PROJECT_DIR$/src/TANot.java" />
         <option value="$PROJECT_DIR$/src/TAOr.java" />
         <option value="$PROJECT_DIR$/src/TAXor.java" />
+        <option value="$PROJECT_DIR$/src/TADataType.java" />
+        <option value="$PROJECT_DIR$/src/TANumber.java" />
+        <option value="$PROJECT_DIR$/src/TABool.java" />
       </list>
     </option>
   </component>
@@ -762,7 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TADataType.java" />
     <entry file="file://$PROJECT_DIR$/src/TAOperation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -837,22 +829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TANumber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TABool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="37" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -944,6 +920,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="31" column="36" lean-forward="false" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TADataType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TANumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="44" lean-forward="false" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TABool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="41" lean-forward="false" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
           <folding />
         </state>
       </provider>

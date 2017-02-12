@@ -1,3 +1,3 @@
-public interface TANumber extends TAObject {
+public interface TANumber extends TADataType {
     abstract Number getValue();
 }

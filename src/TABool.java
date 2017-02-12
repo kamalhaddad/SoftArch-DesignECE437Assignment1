@@ -1,4 +1,4 @@
-public class TABool implements TAObject{
+public class TABool implements TADataType{
 
     private Boolean value_boolean;
     private final String name;
