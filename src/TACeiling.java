@@ -1,6 +1,6 @@
 import static java.lang.StrictMath.ceil;
 
-public class TACeiling implements TANumber,TAArithOps{
+public class TACeiling extends TAInt implements TAArithOps{
 
     int value_ceiling;
     TADouble operand;

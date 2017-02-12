@@ -1,7 +1,7 @@
 public class TAInt implements TANumber{
 
     private int value_int;
-    private final String name;
+    private String name;
 
 
     public TAInt(String s){
@@ -9,6 +9,9 @@ public class TAInt implements TANumber{
         name =s;
     }
 
+    protected TAInt(){
+
+    }
     public void evaluate(){
 
     }

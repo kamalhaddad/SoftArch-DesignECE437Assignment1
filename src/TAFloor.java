@@ -1,6 +1,6 @@
 import static java.lang.StrictMath.floor;
 
-public class TAFloor implements TANumber,TAArithOps{
+public class TAFloor extends TAInt implements TAArithOps{
 
     private int value_floor;
     TADouble operand;
