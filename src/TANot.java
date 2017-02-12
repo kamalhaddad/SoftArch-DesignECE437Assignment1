@@ -5,7 +5,7 @@ public class TANot extends TABool implements TABoolOps {
     private TABool operand;
 
     TANot(TABool b){
-
+        operand = b;
     }
 
     public void evaluate(){
@@ -22,5 +22,10 @@ public class TANot extends TABool implements TABoolOps {
         System.out.print("(~ ");
         operand.list();
         System.out.print(" )");
+    }
+
+    public void printState(){
+        System.out.println(value_not);
+
     }
 }

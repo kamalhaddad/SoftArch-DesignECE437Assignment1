@@ -16,7 +16,7 @@ public class TAEquals extends TABool implements TABoolOps{
         return value_equals;
     }
 
-    public void printstate(){
+    public void printState(){
 
         System.out.println(value_equals);
     }

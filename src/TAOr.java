@@ -28,5 +28,10 @@ public class TAOr extends TABool implements TABoolOps{
 
         }
 
+        public void printState(){
+        System.out.println(value_or);
+
+        }
+
 
 }

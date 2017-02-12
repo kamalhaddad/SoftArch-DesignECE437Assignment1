@@ -10,6 +10,7 @@ public class TAInt implements TANumber{
     }
 
     public TAInt(String s){
+
         name =s;
     }
 

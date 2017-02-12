@@ -3,9 +3,10 @@ import static java.lang.StrictMath.ceil;
 public class TACeiling implements TANumber,TAArithOps{
 
     int value_ceiling;
-    TANumber operand;
+    TADouble operand;
 
-    TACeiling(TANumber d){
+    TACeiling(TADouble d){
+
         operand = d;
     }
 

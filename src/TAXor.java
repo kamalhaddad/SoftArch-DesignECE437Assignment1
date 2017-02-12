@@ -27,4 +27,9 @@ public class TAXor extends TABool implements TABoolOps {
         operand2.list();
         System.out.print(" )");
     }
+
+    public void printState(){
+        System.out.println(value_xor);
+
+    }
 }

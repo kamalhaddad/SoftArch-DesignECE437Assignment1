@@ -4,19 +4,23 @@ public class TAAnd extends TABool implements TABoolOps {
     TABool operand1, operand2;
 
     TAAnd(TABool a, TABool b) {
+
         operand1 = a;
         operand2 = b;
     }
 
 
-    Boolean getValue() { return value_and;}
+    Boolean getValue() {
+
+        return value_and;
+    }
 
     public void evaluate(){
 
         value_and = operand1.getValue() && operand2.getValue();
     }
 
-    public void printstate(){
+    public void printState(){
 
         System.out.println(value_and);
     }

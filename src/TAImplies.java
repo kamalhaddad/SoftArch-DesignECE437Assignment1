@@ -20,7 +20,7 @@ public class TAImplies extends TABool implements TABoolOps{
             value_implies = true;
     }
 
-    public void printstate(){
+    public void printState(){
 
         System.out.println(value_implies);
     }

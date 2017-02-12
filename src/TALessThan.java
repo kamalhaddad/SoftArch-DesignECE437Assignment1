@@ -35,4 +35,9 @@ public class TALessThan extends TABool implements TABoolOps{
         System.out.print(" )");
 
     }
+
+    public void printState(){
+        System.out.println(value_lessthan);
+
+    }
 }

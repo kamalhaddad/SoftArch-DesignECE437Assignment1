@@ -31,4 +31,9 @@ public class TABool implements TAObject{
 
         System.out.print(name);
     }
+
+    public void printState(){
+        System.out.println(value_boolean);
+
+    }
 }
