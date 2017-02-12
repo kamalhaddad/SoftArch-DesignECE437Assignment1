@@ -1,13 +1,8 @@
 public class TAInt implements TANumber{
 
     private int value_int;
-    private String name;
+    private final String name;
 
-    public TAInt(){
-
-        name = "";
-
-    }
 
     public TAInt(String s){
 

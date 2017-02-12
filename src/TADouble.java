@@ -1,12 +1,8 @@
 public class TADouble implements TANumber{
 
     private double value_double;
-    private String name;
+    private final String name;
 
-    public TADouble() {
-
-        name = "";
-    }
 
     public TADouble(String s){
 

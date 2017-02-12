@@ -3,10 +3,6 @@ public class TABool implements TADataType{
     private Boolean value_boolean;
     private final String name;
 
-    public TABool(){
-
-        name = "";
-    }
 
     public TABool(String s){
 
