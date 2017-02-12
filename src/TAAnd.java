@@ -1,7 +1,11 @@
+import javax.lang.model.element.Name;
+
 public class TAAnd extends TABool implements TABoolOps {
 
-    private Boolean value_and;
-    TABool operand1, operand2;
+    private boolean value_and;
+    private TABool operand1, operand2;
+    private String name;
+
 
     TAAnd(TABool a, TABool b) {
 
@@ -9,6 +13,14 @@ public class TAAnd extends TABool implements TABoolOps {
         operand2 = b;
     }
 
+    TAAnd(String s,TABool a, TABool b) throws Exception {
+
+        operand1 = a;
+        operand2 = b;
+        NamesChecker.check(s);
+        name = s;
+
+    }
 
     Boolean getValue() {
 

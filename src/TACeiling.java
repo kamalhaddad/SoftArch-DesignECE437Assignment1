@@ -3,10 +3,18 @@ import static java.lang.StrictMath.ceil;
 public class TACeiling extends TAInt implements TAArithOps{
 
     int value_ceiling;
-    TADouble operand;
+    private TADouble operand;
+    private String name;
 
     TACeiling(TADouble d){
 
+        operand = d;
+    }
+
+    TACeiling(String s, TADouble d) throws Exception {
+
+        NamesChecker.check(s);
+        name = s;
         operand = d;
     }
 

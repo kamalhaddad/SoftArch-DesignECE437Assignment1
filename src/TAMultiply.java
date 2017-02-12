@@ -2,6 +2,7 @@ public class TAMultiply implements TANumber, TAArithOps {
 
     private Number value_multiply;
     private TANumber operand1, operand2;
+    private String name;
 
     TAMultiply(TAInt a, TAInt b){
         operand1 = a;
@@ -10,6 +11,24 @@ public class TAMultiply implements TANumber, TAArithOps {
     }
 
     TAMultiply(TADouble a, TADouble b){
+        operand1 = a;
+        operand2 = b;
+
+    }
+
+    TAMultiply(String s, TAInt a, TAInt b) throws Exception{
+
+        NamesChecker.check(s);
+        name = s;
+        operand1 = a;
+        operand2 = b;
+
+    }
+
+    TAMultiply(String s, TADouble a, TADouble b) throws Exception{
+
+        NamesChecker.check(s);
+        name = s;
         operand1 = a;
         operand2 = b;
 

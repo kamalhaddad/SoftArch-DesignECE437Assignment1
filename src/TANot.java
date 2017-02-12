@@ -3,8 +3,15 @@ public class TANot extends TABool implements TABoolOps {
 
     private Boolean value_not;
     private TABool operand;
+    private String name;
 
     TANot(TABool b){
+        operand = b;
+    }
+
+    TANot(String s, TABool b) throws Exception {
+        NamesChecker.check(s);
+        name = s;
         operand = b;
     }
 

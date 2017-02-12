@@ -1,7 +1,7 @@
 
 public class Main {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception {
 
         TAInt x = new TAInt("x");
         TADouble d = new TADouble("d");
@@ -10,6 +10,12 @@ public class Main {
         TALessThan t1 = new TALessThan(x,y);
         TAAnd t2 = new TAAnd (b,t1);
         t2.list();
+
+        TAAnd a = new TAAnd("hello",b,b);
+        TAAnd z = new TAAnd("hello",b,b);
+
+
+
 
     }
 }

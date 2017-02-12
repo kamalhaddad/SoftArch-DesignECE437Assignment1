@@ -4,8 +4,8 @@ public class TAInt implements TANumber{
     private String name;
 
 
-    public TAInt(String s){
-
+    public TAInt(String s) throws Exception {
+        NamesChecker.check(s);
         name =s;
     }
 

@@ -1,11 +1,14 @@
 public class TABool implements TADataType{
 
     private Boolean value_boolean;
-    private final String name;
+    private String name;
 
+    protected TABool(){
 
-    public TABool(String s){
+    }
+    public TABool(String s) throws Exception {
 
+        NamesChecker.check(s);
         name = s;
     }
 

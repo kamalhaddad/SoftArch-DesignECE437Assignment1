@@ -2,16 +2,35 @@ public class TALessThan extends TABool implements TABoolOps{
 
     private Boolean value_lessthan;
     private TANumber operand1, operand2;
+    private String name;
 
     TALessThan(TAInt a, TAInt b){
         operand1 = a;
         operand2 = b;
     }
 
+    TALessThan(String s, TAInt a, TAInt b) throws Exception {
+
+        NamesChecker.check(s);
+        name = s;
+        operand1 = a;
+        operand2 = b;
+
+    }
+
     TALessThan(TADouble a , TADouble b){
         operand1 = a;
         operand2 = b;
     }
+
+    TALessThan(String s,TADouble a , TADouble b) throws Exception {
+
+        NamesChecker.check(s);
+        name = s;
+        operand1 = a;
+        operand2 = b;
+    }
+
 
     public Boolean getValue() {
 

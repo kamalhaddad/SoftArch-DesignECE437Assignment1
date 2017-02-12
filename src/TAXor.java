@@ -2,9 +2,18 @@ public class TAXor extends TABool implements TABoolOps {
 
     private Boolean value_xor;
     private TABool operand1, operand2;
+    private String name;
 
     TAXor(TABool a, TABool b){
 
+        operand1 = a;
+        operand2 = b;
+    }
+
+    TAXor(String s, TABool a, TABool b) throws Exception {
+
+        NamesChecker.check(s);
+        name = s;
         operand1 = a;
         operand2 = b;
     }

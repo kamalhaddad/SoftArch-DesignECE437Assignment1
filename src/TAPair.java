@@ -10,7 +10,8 @@ public class TAPair implements TADataType{
         second = b;
     }
 
-    TAPair(String s, TADataType a, TADataType b){
+    TAPair(String s, TADataType a, TADataType b) throws Exception {
+        NamesChecker.check(s);
         flag = true;
         name = s;
         first = a;
@@ -34,11 +35,11 @@ public class TAPair implements TADataType{
         else
             System.out.print("( ");
             first.list();
-            System.out.print(" ");
+            System.out.print(", ");
             second.list();
             System.out.print(" ) ");
     }
 
-    
+
 
 }

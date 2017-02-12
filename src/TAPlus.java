@@ -2,6 +2,7 @@ public class TAPlus implements TANumber,TAArithOps{
 
     private Number value_plus;
     private TANumber operand1, operand2;
+    private String name;
 
     TAPlus(TAInt a, TAInt b){
 
@@ -9,8 +10,23 @@ public class TAPlus implements TANumber,TAArithOps{
         operand2 = b;
     }
 
+    TAPlus(String s, TAInt a, TAInt b) throws Exception {
+
+        NamesChecker.check(s);
+        name = s;
+        operand1 = a;
+        operand2 = b;
+    }
+
     TAPlus(TADouble a, TADouble b){
 
+        operand1 = a;
+        operand2 = b;
+    }
+
+    TAPlus(String s, TADouble a, TADouble b) throws Exception {
+        NamesChecker.check(s);
+        name = s;
         operand1 = a;
         operand2 = b;
     }
