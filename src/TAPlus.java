@@ -2,7 +2,7 @@ public class TAPlus implements TANumber,TAArithOps{
 
     private Number value_plus;
     private TANumber operand1, operand2;
-    private String name;
+    private String name = null;
 
     TAPlus(TAInt a, TAInt b){
 
@@ -55,11 +55,14 @@ public class TAPlus implements TANumber,TAArithOps{
     }
 
     public void list(){
-
-        System.out.print("(+ ");
-        operand1.list();
-        System.out.print(" ");
-        operand2.list();
-        System.out.print(" )");
+        if(name == null) {
+            System.out.print("(+ ");
+            operand1.list();
+            System.out.print(" ");
+            operand2.list();
+            System.out.print(" )");
+        }
+        else
+            System.out.print(name);
     }
 }

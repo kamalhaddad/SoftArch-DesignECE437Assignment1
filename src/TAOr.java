@@ -1,8 +1,8 @@
 public class TAOr extends TABool implements TABoolOps{
 
-        private Boolean value_or;
-        private TABool operand1, operand2;
-        private String name;
+    private Boolean value_or;
+    private TABool operand1, operand2;
+    private String name = null;
 
         TAOr(TABool a, TABool b){
 
@@ -29,17 +29,21 @@ public class TAOr extends TABool implements TABoolOps{
         }
 
         public void list(){
-            System.out.print("(or ");
-            operand1.list();
-            System.out.print(" ");
-            operand2.list();
-            System.out.print(" )");
+            if(name == null) {
+                System.out.print("(or ");
+                operand1.list();
+                System.out.print(" ");
+                operand2.list();
+                System.out.print(" )");
+            }
+            else
+                System.out.print(name);
 
         }
 
         public void printState(){
-        System.out.println(value_or);
 
+        System.out.println(value_or);
         }
 
 

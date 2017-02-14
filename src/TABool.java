@@ -1,7 +1,7 @@
 public class TABool implements TADataType{
 
     private Boolean value_boolean;
-    private String name;
+    private String name = null;
 
     protected TABool(){
 
@@ -27,7 +27,10 @@ public class TABool implements TADataType{
     }
 
     public void list(){
+        if(name == null)
+            System.out.print("( "+value_boolean+" ) ");
 
+        else
         System.out.print(name);
     }
 

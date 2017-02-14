@@ -1,13 +1,11 @@
-import java.lang.reflect.Type;
-
 public class TAInt implements TANumber{
 
     private int value_int;
-    private String name;
+    private String name = null;
 
     public TAInt(String s) throws Exception {
         NamesChecker.check(s);
-        name =s;
+        name = s;
         value_int = 0;
     }
 

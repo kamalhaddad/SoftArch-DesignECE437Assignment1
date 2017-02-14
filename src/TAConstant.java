@@ -1,7 +1,7 @@
 public class TAConstant implements TANumber {
 
     private final Number value;
-    private String name;
+    private String name = null;
 
     TAConstant(int op){
         value = op;
@@ -27,7 +27,12 @@ public class TAConstant implements TANumber {
 
     public void evaluate(){}
 
-    public void list(){}
+    public void list(){
+        if(name == null)
+            System.out.print("( "+value+ " )");
+        else
+            System.out.print(name);
+    }
 
     public Number getValue() {
         return value;

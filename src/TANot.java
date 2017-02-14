@@ -3,7 +3,7 @@ public class TANot extends TABool implements TABoolOps {
 
     private Boolean value_not;
     private TABool operand;
-    private String name;
+    private String name = null;
 
     TANot(TABool b){
         operand = b;
@@ -26,9 +26,13 @@ public class TANot extends TABool implements TABoolOps {
     }
 
     public void list(){
-        System.out.print("(~ ");
-        operand.list();
-        System.out.print(" )");
+        if(name == null) {
+            System.out.print("(~ ");
+            operand.list();
+            System.out.print(" )");
+        }
+        else
+            System.out.print(name);
     }
 
     public void printState(){

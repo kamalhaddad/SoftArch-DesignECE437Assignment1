@@ -4,7 +4,7 @@ public class TACeiling extends TAInt implements TAArithOps{
 
     int value_ceiling;
     private TADouble operand;
-    private String name;
+    private String name = null;
 
     TACeiling(TADouble d){
 
@@ -29,9 +29,14 @@ public class TACeiling extends TAInt implements TAArithOps{
     }
 
     public void list(){
-        System.out.print("( ceiling ");
-        operand.list();
-        System.out.print(" )");
+        if(name == null)
+        {
+            System.out.print("( ceiling ");
+            operand.list();
+            System.out.print(" )");
+        }
+        else
+            System.out.print(name);
     }
 
 }

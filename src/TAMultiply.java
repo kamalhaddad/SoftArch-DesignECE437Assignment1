@@ -2,7 +2,7 @@ public class TAMultiply implements TANumber, TAArithOps {
 
     private Number value_multiply;
     private TANumber operand1, operand2;
-    private String name;
+    private String name = null;
 
     TAMultiply(TAInt a, TAInt b){
         operand1 = a;
@@ -46,11 +46,14 @@ public class TAMultiply implements TANumber, TAArithOps {
     }
 
     public void list(){
-
-        System.out.print("(x ");
-        operand1.list();
-        System.out.print(" ");
-        operand2.list();
-        System.out.print(" )");
+        if(name == null) {
+            System.out.print("(x ");
+            operand1.list();
+            System.out.print(" ");
+            operand2.list();
+            System.out.print(" )");
+        }
+        else
+            System.out.print(name);
     }
 }

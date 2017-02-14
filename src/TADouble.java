@@ -1,7 +1,7 @@
 public class TADouble implements TANumber{
 
     private double value_double;
-    private String name;
+    private String name = null;
 
 
     public TADouble(String s){
@@ -27,8 +27,12 @@ public class TADouble implements TANumber{
     }
 
     public void list(){
-
-        System.out.print(name);
+        if(name == null)
+        {
+            System.out.print("( "+ value_double+" )");
+        }
+        else
+            System.out.print(name);
     }
 
 }

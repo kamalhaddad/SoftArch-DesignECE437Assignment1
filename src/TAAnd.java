@@ -4,7 +4,7 @@ public class TAAnd extends TABool implements TABoolOps {
 
     private boolean value_and;
     private TABool operand1, operand2;
-    private String name;
+    private String name = null;
 
 
     TAAnd(TABool a, TABool b) {
@@ -39,11 +39,15 @@ public class TAAnd extends TABool implements TABoolOps {
 
     public void list(){
 
-        System.out.print("(& ");
-        operand1.list();
-        System.out.print(" ");
-        operand2.list();
-        System.out.print(" )");
+        if(name !=  null) {
+            System.out.print("(& ");
+            operand1.list();
+            System.out.print(" ");
+            operand2.list();
+            System.out.print(" )");
+        }
+        else
+            System.out.print(name);
 
     }
 

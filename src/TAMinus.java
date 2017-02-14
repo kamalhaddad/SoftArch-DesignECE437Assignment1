@@ -3,7 +3,7 @@ public class TAMinus implements TANumber, TAArithOps {
     private Number value_minus;
     private TANumber operand1, operand2;
     private boolean flag;
-    private String name;
+    private String name = null;
 
     TAMinus(TAInt a, TAInt b){
             flag = true;
@@ -81,13 +81,17 @@ public class TAMinus implements TANumber, TAArithOps {
 
     public void list(){
 
-        System.out.print("(- ");
-        operand1.list();
-        if(flag) {
-            System.out.print(" ");
-            operand2.list();
+        if(name == null) {
+            System.out.print("(- ");
+            operand1.list();
+            if (flag) {
+                System.out.print(" ");
+                operand2.list();
+            }
+            System.out.print(" )");
         }
-        System.out.print(" )");
+        else
+            System.out.print(name);
     }
 
 

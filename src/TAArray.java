@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class TAArray<T extends TADataType> implements TADataType{
 
-    private final String name;
+    private String name = null;
     private int size;
     ArrayList<T> array;
 
@@ -33,7 +33,7 @@ public class TAArray<T extends TADataType> implements TADataType{
 
     @Override
     public void list() {
-
+        System.out.print(name);
     }
 
     @Override

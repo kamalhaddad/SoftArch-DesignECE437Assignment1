@@ -1,18 +1,15 @@
 public class TAPair implements TADataType{
     private final TADataType first;
     private final TADataType second;
-    private  String name;
-    private boolean flag;
+    private  String name = null;
 
     TAPair(TADataType a, TADataType b){
-        flag =false;
         first = a;
         second = b;
     }
 
     TAPair(String s, TADataType a, TADataType b) throws Exception {
         NamesChecker.check(s);
-        flag = true;
         name = s;
         first = a;
         second = b;
@@ -30,8 +27,8 @@ public class TAPair implements TADataType{
     public void evaluate(){};
 
     public void list(){
-        if(flag)
-            System.out.println(name);
+        if(name != null)
+            System.out.print(name);
         else
             System.out.print("( ");
             first.list();

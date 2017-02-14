@@ -2,7 +2,7 @@ public class TADivide implements TANumber, TAArithOps {
 
     private Number value_divide;
     TANumber operand1, operand2;
-    private String name;
+    private String name = null;
 
     TADivide(TAInt a, TAInt b){
             operand1 = a;
@@ -44,11 +44,13 @@ public class TADivide implements TANumber, TAArithOps {
     }
 
     public void list(){
-
-        System.out.print("(/ ");
+        if(name == null)
+        {System.out.print("(/ ");
         operand1.list();
         System.out.println(" ");
         operand2.list();
-        System.out.print(" )");
+        System.out.print(" )");}
+        else
+            System.out.print(name);
     }
 }

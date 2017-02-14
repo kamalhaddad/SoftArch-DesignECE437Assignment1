@@ -2,7 +2,7 @@ public class TALessThan extends TABool implements TABoolOps{
 
     private Boolean value_lessthan;
     private TANumber operand1, operand2;
-    private String name;
+    private String name = null;
 
     TALessThan(TAInt a, TAInt b){
         operand1 = a;
@@ -46,13 +46,15 @@ public class TALessThan extends TABool implements TABoolOps{
     }
 
     public void list(){
-
-        System.out.print("(< ");
-        operand1.list();
-        System.out.print(" ");
-        operand2.list();
-        System.out.print(" )");
-
+        if(name == null) {
+            System.out.print("(< ");
+            operand1.list();
+            System.out.print(" ");
+            operand2.list();
+            System.out.print(" )");
+        }
+        else
+            System.out.print(name);
     }
 
     public void printState(){

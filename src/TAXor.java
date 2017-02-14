@@ -2,7 +2,7 @@ public class TAXor extends TABool implements TABoolOps {
 
     private Boolean value_xor;
     private TABool operand1, operand2;
-    private String name;
+    private String name = null;
 
     TAXor(TABool a, TABool b){
 
@@ -29,12 +29,15 @@ public class TAXor extends TABool implements TABoolOps {
     }
 
     public void list(){
-
-        System.out.print("(xor ");
-        operand1.list();
-        System.out.print(" ");
-        operand2.list();
-        System.out.print(" )");
+        if(name == null) {
+            System.out.print("(xor ");
+            operand1.list();
+            System.out.print(" ");
+            operand2.list();
+            System.out.print(" )");
+        }
+        else
+            System.out.print(name);
     }
 
     public void printState(){

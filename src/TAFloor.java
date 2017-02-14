@@ -3,11 +3,18 @@ import static java.lang.StrictMath.floor;
 public class TAFloor extends TAInt implements TAArithOps{
 
     private int value_floor;
-    TADouble operand;
+    private TADouble operand;
+    private String name = null;
 
     TAFloor(TADouble d){
 
         operand = d;
+    }
+
+    TAFloor(String s, TADouble d){
+
+        operand = d;
+        name  = s;
     }
 
     public Integer getValue() {
@@ -22,8 +29,12 @@ public class TAFloor extends TAInt implements TAArithOps{
 
     public void list(){
 
-        System.out.print("(floor ");
-        operand.list();
-        System.out.print(" )");
+        if(name == null) {
+            System.out.print("(floor ");
+            operand.list();
+            System.out.print(" )");
+        }
+        else
+            System.out.print(name);
     }
 }
