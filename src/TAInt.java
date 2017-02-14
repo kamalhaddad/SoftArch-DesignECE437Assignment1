@@ -1,12 +1,14 @@
+import java.lang.reflect.Type;
+
 public class TAInt implements TANumber{
 
     private int value_int;
     private String name;
 
-
     public TAInt(String s) throws Exception {
         NamesChecker.check(s);
         name =s;
+        value_int = 0;
     }
 
     protected TAInt(){
@@ -29,5 +31,9 @@ public class TAInt implements TANumber{
     public void list(){
 
         System.out.print(name);
+    }
+
+    public TAInt type(){
+            return new TAInt();
     }
 }

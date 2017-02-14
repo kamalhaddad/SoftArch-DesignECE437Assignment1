@@ -31,6 +31,18 @@ public class TAPlus implements TANumber,TAArithOps{
         operand2 = b;
     }
 
+    TAPlus(TAInt a , TAConstant b){
+        operand1 = a;
+        operand2 = b;
+    }
+
+    TAPlus(String s, TAInt a, TAConstant b) throws Exception {
+        NamesChecker.check(s);
+        name = s;
+        operand1 = a;
+        operand2 = b;
+    }
+
     public Number getValue(){
 
         return value_plus;

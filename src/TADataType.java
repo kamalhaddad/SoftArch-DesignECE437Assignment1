@@ -1,3 +1,2 @@
-public interface TADataType extends TAObject {
-
+public interface TADataType<T> extends TAObject {
 }
