@@ -38,4 +38,5 @@ public class TABool implements TADataType{
         System.out.println(value_boolean);
 
     }
+
 }

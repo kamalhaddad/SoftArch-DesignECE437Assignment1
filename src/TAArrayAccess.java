@@ -81,7 +81,7 @@ public class TAArrayAccess<T extends TADataType>  implements TADataType{
         if(name == null) {
             System.out.print("( ");
             Array.list();
-            System.out.print("[" +index + "] ) ");
+            System.out.print("[" +index + "]) ");
         }
         else
             System.out.print(name);
