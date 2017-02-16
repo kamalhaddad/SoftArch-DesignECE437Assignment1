@@ -1,5 +1,6 @@
-import javax.lang.model.element.Name;
-
+/*
+Type Abstraction for And operation
+ */
 public class TAAnd extends TABool implements TABoolOps {
 
     private boolean value_and;
@@ -19,7 +20,6 @@ public class TAAnd extends TABool implements TABoolOps {
         operand2 = b;
         NamesChecker.check(s);
         name = s;
-
     }
 
     Boolean getValue() {
@@ -46,6 +46,7 @@ public class TAAnd extends TABool implements TABoolOps {
             operand2.list();
             System.out.print(" )");
         }
+
         else
             System.out.print(name);
 

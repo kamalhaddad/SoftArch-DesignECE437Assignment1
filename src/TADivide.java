@@ -1,10 +1,14 @@
+/*
+Type Abstraction for division operator
+*/
 public class TADivide implements TANumber, TAArithOps {
 
     private Number value_divide;
-    TANumber operand1, operand2;
+    private TANumber operand1, operand2;
     private String name = null;
 
     TADivide(TAInt a, TAInt b){
+
             operand1 = a;
             operand2 = b;
 
@@ -20,6 +24,7 @@ public class TADivide implements TANumber, TAArithOps {
     }
 
     TADivide(String s, TADouble a, TADouble b) throws Exception {
+
         NamesChecker.check(s);
         name =s;
         operand1 = a;
@@ -44,12 +49,15 @@ public class TADivide implements TANumber, TAArithOps {
     }
 
     public void list(){
-        if(name == null)
-        {System.out.print("(/ ");
-        operand1.list();
-        System.out.println(" ");
-        operand2.list();
-        System.out.print(" )");}
+
+        if(name == null) {
+            System.out.print("(/ ");
+            operand1.list();
+            System.out.println(" ");
+            operand2.list();
+            System.out.print(" )");
+        }
+
         else
             System.out.print(name);
     }

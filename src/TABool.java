@@ -1,3 +1,6 @@
+/*
+Type Abstraction for Boolean data type
+*/
 public class TABool implements TADataType{
 
     private Boolean value_boolean;
@@ -6,6 +9,7 @@ public class TABool implements TADataType{
     protected TABool(){
 
     }
+
     public TABool(String s) throws Exception {
 
         NamesChecker.check(s);

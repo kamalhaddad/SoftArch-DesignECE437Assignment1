@@ -1,3 +1,6 @@
+/*
+Type Abstraction for double data type
+*/
 public class TADouble implements TANumber{
 
     private double value_double;
@@ -27,10 +30,10 @@ public class TADouble implements TANumber{
     }
 
     public void list(){
+
         if(name == null)
-        {
             System.out.print("( "+ value_double+" )");
-        }
+
         else
             System.out.print(name);
     }

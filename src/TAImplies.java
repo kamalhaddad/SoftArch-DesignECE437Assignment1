@@ -5,11 +5,13 @@ public class TAImplies extends TABool implements TABoolOps{
     private String name = null;
 
     TAImplies(TABool a, TABool b) {
+
         operand1 = a;
         operand2 = b;
     }
 
     TAImplies(String s, TABool a, TABool b) {
+
         operand1 = a;
         operand2 = b;
         name = s;
@@ -22,6 +24,7 @@ public class TAImplies extends TABool implements TABoolOps{
     }
 
     public void evaluate(){
+
         if (operand1.getValue())
              value_implies = operand2.getValue();
         else
@@ -37,13 +40,14 @@ public class TAImplies extends TABool implements TABoolOps{
 
         if (name == null){
             System.out.print("(implies ");
-        operand1.list();
-        System.out.print(" ");
-        operand2.list();
-        System.out.print(" )");
+            operand1.list();
+            System.out.print(" ");
+            operand2.list();
+            System.out.print(" )");
     }
-    else
-        System.out.print(value_implies);
+
+        else
+            System.out.print(value_implies);
 
     }
 }

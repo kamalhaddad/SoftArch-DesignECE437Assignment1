@@ -1,3 +1,6 @@
+/*
+Type Abstraction for xor operator
+*/
 public class TAXor extends TABool implements TABoolOps {
 
     private Boolean value_xor;

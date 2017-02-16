@@ -1,3 +1,6 @@
+/*
+Type abstraction for a constant(integer or double)
+*/
 public class TAConstant implements TANumber {
 
     private final Number value;
@@ -24,8 +27,6 @@ public class TAConstant implements TANumber {
         name = s;
         value = op;
     }
-
-    public void evaluate(){}
 
     public void list(){
         if(name == null)

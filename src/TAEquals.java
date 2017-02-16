@@ -1,3 +1,6 @@
+/*
+Type Abstraction for equals boolean operation
+ */
 public class TAEquals extends TABool implements TABoolOps{
 
     private Boolean value_equals;
@@ -16,6 +19,7 @@ public class TAEquals extends TABool implements TABoolOps{
     }
 
     TAEquals(String s, TAInt a, TAInt b){
+
         operand1 = a;
         operand2 = b;
         name = s;
@@ -23,6 +27,7 @@ public class TAEquals extends TABool implements TABoolOps{
     }
 
     TAEquals(String s, TADouble a, TADouble b){
+
         operand1 = a;
         operand2 = b;
         name = s;
@@ -40,16 +45,18 @@ public class TAEquals extends TABool implements TABoolOps{
     }
 
     public void list() {
-        if (name == null){
-            System.out.print("(= ");
-        operand1.list();
-        System.out.println(" ");
-        operand2.list();
-        System.out.print(")");
-    }
-    else
-        System.out.print(name);
 
+        if (name == null)
+        {
+            System.out.print("(= ");
+            operand1.list();
+            System.out.println(" ");
+            operand2.list();
+            System.out.print(")");
+        }
+
+        else
+            System.out.print(name);
 
     }
 

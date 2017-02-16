@@ -1,5 +1,7 @@
 public class Main {
-
+/*
+Class Main is purely for testing purposes
+*/
     public static void main(String[] args) throws Exception {
 
        /* TAInt x = new TAInt("x");
@@ -25,7 +27,6 @@ public class Main {
        TAInt i = new TAInt ("i");
        TAPlus exp = new TAPlus(i, one);
        TAArrayAccess ai = new TAArrayAccess(a, one);
-       ai.set(2.8);
 
     }
 }

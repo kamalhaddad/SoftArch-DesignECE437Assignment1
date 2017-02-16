@@ -1,3 +1,6 @@
+/*
+Type Abstraction for integers
+*/
 public class TAInt implements TANumber{
 
     private int value_int;
@@ -10,10 +13,6 @@ public class TAInt implements TANumber{
     }
 
     protected TAInt(){
-
-    }
-    public void evaluate(){
-
     }
 
     public void set(int i){
@@ -34,4 +33,5 @@ public class TAInt implements TANumber{
     public TAInt type(){
             return new TAInt();
     }
+
 }

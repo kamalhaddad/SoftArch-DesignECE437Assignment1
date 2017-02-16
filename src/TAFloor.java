@@ -1,5 +1,7 @@
 import static java.lang.StrictMath.floor;
-
+/*
+Type Abstraction for floor operation
+*/
 public class TAFloor extends TAInt implements TAArithOps{
 
     private int value_floor;

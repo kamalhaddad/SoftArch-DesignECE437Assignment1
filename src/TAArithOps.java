@@ -1,3 +1,6 @@
-public interface TAArithOps extends TAOperation{
+/*
+Interface for arithmetic operations
+ */
+interface TAArithOps extends TAOperation{
 
 }

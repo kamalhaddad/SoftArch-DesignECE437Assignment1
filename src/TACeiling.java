@@ -1,8 +1,10 @@
 import static java.lang.StrictMath.ceil;
-
+/*
+Type Abstraction for ceiling operation
+*/
 public class TACeiling extends TAInt implements TAArithOps{
 
-    int value_ceiling;
+    private int value_ceiling;
     private TADouble operand;
     private String name = null;
 
@@ -29,12 +31,14 @@ public class TACeiling extends TAInt implements TAArithOps{
     }
 
     public void list(){
+
         if(name == null)
         {
             System.out.print("( ceiling ");
             operand.list();
             System.out.print(" )");
         }
+
         else
             System.out.print(name);
     }

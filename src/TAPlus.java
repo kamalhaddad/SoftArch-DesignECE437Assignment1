@@ -1,3 +1,6 @@
+/*
+Type abstraction for addition operation
+*/
 public class TAPlus implements TANumber,TAArithOps{
 
     private Number value_plus;
@@ -25,6 +28,7 @@ public class TAPlus implements TANumber,TAArithOps{
     }
 
     TAPlus(String s, TADouble a, TADouble b) throws Exception {
+
         NamesChecker.check(s);
         name = s;
         operand1 = a;
@@ -32,11 +36,13 @@ public class TAPlus implements TANumber,TAArithOps{
     }
 
     TAPlus(TAInt a , TAConstant b){
+
         operand1 = a;
         operand2 = b;
     }
 
     TAPlus(String s, TAInt a, TAConstant b) throws Exception {
+
         NamesChecker.check(s);
         name = s;
         operand1 = a;
@@ -55,13 +61,16 @@ public class TAPlus implements TANumber,TAArithOps{
     }
 
     public void list(){
+
         if(name == null) {
+
             System.out.print("(+ ");
             operand1.list();
             System.out.print(" ");
             operand2.list();
             System.out.print(" )");
         }
+
         else
             System.out.print(name);
     }

@@ -1,5 +1,7 @@
 import java.util.ArrayList;
-
+/*
+Type Abstraction for arrays of TADataType
+*/
 public class TAArray<T extends TADataType> implements TADataType{
 
     private String name = null;
@@ -30,13 +32,9 @@ public class TAArray<T extends TADataType> implements TADataType{
         return size;
     }
 
-    @Override
     public void list() {
         System.out.print(name);
     }
 
-    @Override
-    public void evaluate() {
 
-    }
 }

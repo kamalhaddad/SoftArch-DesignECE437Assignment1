@@ -1,3 +1,6 @@
+/*
+Type Abstraction for less than operation
+*/
 public class TALessThan extends TABool implements TABoolOps{
 
     private Boolean value_lessthan;
@@ -5,8 +8,10 @@ public class TALessThan extends TABool implements TABoolOps{
     private String name = null;
 
     TALessThan(TAInt a, TAInt b){
+
         operand1 = a;
         operand2 = b;
+
     }
 
     TALessThan(String s, TAInt a, TAInt b) throws Exception {
@@ -46,6 +51,7 @@ public class TALessThan extends TABool implements TABoolOps{
     }
 
     public void list(){
+
         if(name == null) {
             System.out.print("(< ");
             operand1.list();
@@ -53,12 +59,13 @@ public class TALessThan extends TABool implements TABoolOps{
             operand2.list();
             System.out.print(" )");
         }
+
         else
             System.out.print(name);
     }
 
     public void printState(){
         System.out.println(value_lessthan);
-
     }
+
 }

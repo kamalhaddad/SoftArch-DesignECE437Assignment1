@@ -1,3 +1,6 @@
+/*
+Type Abstraction for multiplication operation
+*/
 public class TAMultiply implements TANumber, TAArithOps {
 
     private Number value_multiply;
@@ -5,12 +8,14 @@ public class TAMultiply implements TANumber, TAArithOps {
     private String name = null;
 
     TAMultiply(TAInt a, TAInt b){
+
         operand1 = a;
         operand2 = b;
 
     }
 
     TAMultiply(TADouble a, TADouble b){
+
         operand1 = a;
         operand2 = b;
 
@@ -46,6 +51,7 @@ public class TAMultiply implements TANumber, TAArithOps {
     }
 
     public void list(){
+
         if(name == null) {
             System.out.print("(x ");
             operand1.list();
@@ -53,6 +59,7 @@ public class TAMultiply implements TANumber, TAArithOps {
             operand2.list();
             System.out.print(" )");
         }
+
         else
             System.out.print(name);
     }

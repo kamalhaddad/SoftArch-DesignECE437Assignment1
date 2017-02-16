@@ -1,3 +1,6 @@
+/*
+Type Abstraction for minus operation as was as the negation operator
+*/
 public class TAMinus implements TANumber, TAArithOps {
 
     private Number value_minus;
@@ -6,6 +9,7 @@ public class TAMinus implements TANumber, TAArithOps {
     private String name = null;
 
     TAMinus(TAInt a, TAInt b){
+
             flag = true;
             operand1 = a;
             operand2 = b;
@@ -21,6 +25,7 @@ public class TAMinus implements TANumber, TAArithOps {
     }
 
     TAMinus(TADouble a, TADouble b){
+
         flag = false;
         operand1 = a;
         operand2 = b;
@@ -38,6 +43,7 @@ public class TAMinus implements TANumber, TAArithOps {
     }
 
     TAMinus(TAInt i){
+
         flag = false;
         operand1 = i;
 
@@ -54,6 +60,7 @@ public class TAMinus implements TANumber, TAArithOps {
 
 
     TAMinus(String s, TADouble d) throws Exception {
+
         NamesChecker.check(s);
         name = s;
         flag = false;
@@ -62,6 +69,7 @@ public class TAMinus implements TANumber, TAArithOps {
     }
 
     TAMinus(TADouble d){
+
         flag = false;
         operand2 = d;
 
@@ -73,8 +81,10 @@ public class TAMinus implements TANumber, TAArithOps {
     }
 
     public void evaluate(){
+
         if(flag)
-        value_minus = operand1.getValue().doubleValue() - operand2.getValue().doubleValue();
+            value_minus = operand1.getValue().doubleValue() - operand2.getValue().doubleValue();
+
         else
             value_minus = operand1.getValue().doubleValue() * -1.0;
     }
@@ -84,12 +94,15 @@ public class TAMinus implements TANumber, TAArithOps {
         if(name == null) {
             System.out.print("(- ");
             operand1.list();
+
             if (flag) {
                 System.out.print(" ");
                 operand2.list();
             }
+
             System.out.print(" )");
         }
+
         else
             System.out.print(name);
     }

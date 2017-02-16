@@ -1,4 +1,6 @@
-
+/*
+Type Abstraction for Not Boolean operator
+*/
 public class TANot extends TABool implements TABoolOps {
 
     private Boolean value_not;
