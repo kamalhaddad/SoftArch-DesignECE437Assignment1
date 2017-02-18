@@ -1,0 +1,8 @@
+	I did not use a TAPrimtive class as I thought that would be a redundant class, instead, I used a TADataType interface, and a Number interface that inherits from it to abstract both the TAInt and TADouble classes. The rest of the classes that inherit from TADatatype are TABool, TAPair, TAArray, and TAArrayAccess.
+
+	Initially, operations were placed in according to how many operands each takes, so I had a UnaryOps interface, and a BinaryOps interface, each of which inherited from an interface called TAOperation. I also did not see much use to divide them this way and decided that I would separate the two according to returntype; BoolOps and ArithOps replaced the previous interfaces. The classes that implement these interfaces also inherit from one of the classes that inherit from TADataType depending on the return type. I saw necessity in doing so because of the need to be specify the return type of these operations.
+
+	Constructors give static compile time errors when different data types are used as parameters, and a name can be added to each type and operation. Namesshould be distinct or else an exception is thrown. Names are placed in a hash set which is a static member of the root class TAObject, and checking is done through an interface called NamesChecker.
+
+	A type() method is included in all objects and returns a new instance ofthe object itself. This functionality is needed in order for generics to work in TAArray. 
+***********************************************************************************************************************************************		Some extensions to this design maybe easy with few lines of code needed, and others might need more work, but nevertheless, any extension should work. 
