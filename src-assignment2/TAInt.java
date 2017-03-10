@@ -15,6 +15,10 @@ public class TAInt implements TANumber{
     protected TAInt(){
     }
 
+    public String getName(){
+        return name;
+    }
+
     public void set(int i){
 
         value_int = i;

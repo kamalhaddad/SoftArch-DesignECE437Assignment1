@@ -45,6 +45,11 @@ public class TAMultiply implements TANumber, TATerm {
         return value_multiply;
     }
 
+    @Override
+    public String getName() {
+        return null;
+    }
+
     public void evaluate(){
 
         value_multiply = operand1.getValue().doubleValue() * operand2.getValue().doubleValue();

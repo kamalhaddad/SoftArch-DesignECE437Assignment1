@@ -29,6 +29,11 @@ public class TADouble implements TANumber{
         return value_double;
     }
 
+    @Override
+    public String getName() {
+        return null;
+    }
+
     public void list(){
 
         if(name == null)

@@ -80,6 +80,11 @@ public class TAMinus implements TANumber, TATerm {
          return value_minus;
     }
 
+    @Override
+    public String getName() {
+        return null;
+    }
+
     public void evaluate(){
 
         if(flag)

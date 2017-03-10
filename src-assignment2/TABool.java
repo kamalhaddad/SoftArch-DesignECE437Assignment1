@@ -15,12 +15,15 @@ public class TABool implements TAPrimitive {
         NamesChecker.check(s);
         name = s;
     }
+    public String getName(){
+        return name;
+    }
 
     public void set(Boolean b) {
         value_boolean = b;
     }
 
-    Boolean getValue(){
+    public Boolean getValue(){
         return value_boolean;
     }
 

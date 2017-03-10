@@ -54,6 +54,11 @@ public class TAPlus implements TANumber, TATerm {
         return value_plus;
     }
 
+    @Override
+    public String getName() {
+        return null;
+    }
+
     public void evaluate(){
 
         value_plus = operand1.getValue().doubleValue() + operand2.getValue().doubleValue();

@@ -13,11 +13,16 @@ public class TADomain implements TAObject {
         Collections.addAll(domain, args);
     }
 
+    protected List<TAConstant> getList(){
+
+        return domain;
+    }
+
     public boolean add(TAConstant constant) {
         return domain.add(constant);
     }
 
     public void list() {
-        System.out.println(domain.toString());
+        System.out.println  (domain.toString());
     }
 }
