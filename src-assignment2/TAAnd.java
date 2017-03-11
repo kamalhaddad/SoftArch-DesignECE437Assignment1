@@ -34,6 +34,11 @@ public class TAAnd extends TABool implements TAFormula {
         value_and = operand1.getValue() && operand2.getValue();
     }
 
+    @Override
+    public TAPrimitive getValueTA() {
+        return new TABool(value_and);
+    }
+
     public void printState(){
 
         System.out.println(value_and);

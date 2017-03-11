@@ -33,6 +33,11 @@ public class TAOr extends TABool implements TAFormula {
         value_or = operand1.getValue() || operand2.getValue();
     }
 
+    @Override
+    public TAPrimitive getValueTA() {
+        return new TABool(value_or);
+    }
+
     public void list(){
         if(name == null) {
 

@@ -96,6 +96,11 @@ public class TAMinus implements TANumber, TATerm {
             value_minus = operand1.getValue().doubleValue() * -1.0;
     }
 
+    @Override
+    public TAPrimitive getValueTA() {
+        return new TAConstant(value_minus);
+    }
+
     public void list(){
 
         if(name == null) {

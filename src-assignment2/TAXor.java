@@ -34,6 +34,11 @@ public class TAXor extends TABool implements TAFormula {
         value_xor = operand1.getValue() ^ operand2.getValue();
     }
 
+    @Override
+    public TAPrimitive getValueTA() {
+        return new TABool(value_xor);
+    }
+
     public void list(){
         if(name == null) {
             System.out.print("(xor ");

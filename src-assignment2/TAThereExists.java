@@ -76,6 +76,11 @@ public class TAThereExists implements TAFormula {
         }
     }
 
+    @Override
+    public TAPrimitive getValueTA() {
+        return new TABool(value_exists);
+    }
+
     public ArrayList getOperands(){
         ArrayList opList = new ArrayList();
         opList.addAll(formula.getOperands());

@@ -12,6 +12,10 @@ public class TAConstant implements TANumber, TAPrimitive {
         value = op;
     }
 
+    TAConstant(Number op){
+        value = op;
+    }
+
     TAConstant(double op){
         value = op;
     }

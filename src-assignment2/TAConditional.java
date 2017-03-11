@@ -7,6 +7,7 @@
  * e3 is the executed formula/term when the e1 condition is not met
  */
 public class TAConditional implements TAObject {
+    private TAPrimitive result;
     private TAFormula e1;
     private TAOperation e2;
     private TAOperation e3;
@@ -43,12 +44,14 @@ public class TAConditional implements TAObject {
         e1.evaluate();
         if (e1.getValue()) {
             e2.evaluate();
+            result = e2.getValueTA();
         } else {
             e3.evaluate();
+            result = e3.getValueTA();
         }
     }
 
-    /*
-     * public TAPrimitive getValue() {}
-     */
+    public Object getValue() {
+        return result.getValue();
+    }
 }

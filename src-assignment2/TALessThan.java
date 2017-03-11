@@ -38,7 +38,6 @@ public class TALessThan extends TABool implements TAFormula {
         operand2 = b;
     }
 
-
     public Boolean getValue() {
         return value_lessthan;
     }
@@ -49,6 +48,11 @@ public class TALessThan extends TABool implements TAFormula {
             value_lessthan = true;
         else
             value_lessthan = false;
+    }
+
+    @Override
+    public TAPrimitive getValueTA() {
+        return new TABool(value_lessthan);
     }
 
     public void list(){

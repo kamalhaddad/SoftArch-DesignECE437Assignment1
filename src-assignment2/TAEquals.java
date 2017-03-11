@@ -62,6 +62,11 @@ public class TAEquals extends TABool implements TAFormula {
 
     }
 
+    @Override
+    public TAPrimitive getValueTA() {
+        return new TABool(value_equals);
+    }
+
     public ArrayList getOperands(){
         ArrayList opList = new ArrayList();
         opList.addAll(operand1.getOperands());

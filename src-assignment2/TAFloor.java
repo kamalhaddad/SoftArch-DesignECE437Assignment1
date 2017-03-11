@@ -31,6 +31,11 @@ public class TAFloor extends TAInt implements TATerm {
         value_floor = (int)floor((double) operand.getValue());
     }
 
+    @Override
+    public TAPrimitive getValueTA() {
+        return new TAConstant(value_floor);
+    }
+
     public void list(){
 
         if(name == null) {

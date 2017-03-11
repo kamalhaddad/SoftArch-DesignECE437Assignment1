@@ -67,6 +67,11 @@ public class TAPlus implements TANumber, TATerm {
 
     }
 
+    @Override
+    public TAPrimitive getValueTA() {
+        return new TAConstant(value_plus);
+    }
+
     public void list(){
 
         if(name == null) {

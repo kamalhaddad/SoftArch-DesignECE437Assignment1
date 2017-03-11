@@ -24,6 +24,11 @@ public class TANot extends TABool implements TAFormula {
         value_not = !operand.getValue();
     }
 
+    @Override
+    public TAPrimitive getValueTA() {
+        return new TABool(value_not);
+    }
+
     public Boolean getValue(){
 
         return value_not;

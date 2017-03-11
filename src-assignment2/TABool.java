@@ -8,8 +8,9 @@ public class TABool implements TAPrimitive {
     private Boolean value_boolean;
     private String name = null;
 
-    protected TABool(){
-
+    protected TABool(){}
+    protected TABool(boolean value) {
+        value_boolean = value;
     }
 
     public TABool(String s) throws Exception {

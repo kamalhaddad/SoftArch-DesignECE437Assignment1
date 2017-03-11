@@ -76,6 +76,11 @@ public class TAForAll implements TAFormula {
         }
     }
 
+    @Override
+    public TAPrimitive getValueTA() {
+        return new TABool(value_forall);
+    }
+
     public ArrayList getOperands(){
         ArrayList opList = new ArrayList();
         opList.addAll(formula.getOperands());

@@ -32,6 +32,11 @@ public class TACeiling extends TAInt implements TATerm {
         value_ceiling = (int)(ceil((double)operand.getValue()));
     }
 
+    @Override
+    public TAPrimitive getValueTA() {
+        return new TAConstant(value_ceiling);
+    }
+
     public void list(){
 
         if(name == null)

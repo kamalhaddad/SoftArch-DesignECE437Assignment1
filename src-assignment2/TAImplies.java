@@ -29,6 +29,11 @@ public class TAImplies extends TABool implements TAFormula {
             value_implies = true;
     }
 
+    @Override
+    public TAPrimitive getValueTA() {
+        return new TABool(value_implies);
+    }
+
     public void printState(){
 
         System.out.println(value_implies);

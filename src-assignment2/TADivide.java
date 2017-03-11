@@ -55,6 +55,11 @@ public class TADivide implements TANumber, TATerm {
         value_divide = operand1.getValue().doubleValue()/ operand2.getValue().doubleValue();
     }
 
+    @Override
+    public TAPrimitive getValueTA() {
+        return new TAConstant(value_divide);
+    }
+
     public void list(){
 
         if(name == null) {
