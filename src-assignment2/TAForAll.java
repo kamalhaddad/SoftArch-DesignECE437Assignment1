@@ -22,7 +22,7 @@ public class TAForAll implements TAFormula {
 
         //DomainChecker.check(x.getName()); Needs fixing
 
-        ArrayList opList = this.getOperands();
+        ArrayList opList = formula.getOperands();
 
         if(!opList.contains(x))
             throw new Exception("variable " + x.getName() +" not in formula");
@@ -40,7 +40,7 @@ public class TAForAll implements TAFormula {
      */
     @Override
     public Boolean getValue() {
-        return null;
+        return value_forall;
     }
 
     @Override
@@ -61,20 +61,19 @@ public class TAForAll implements TAFormula {
      */
     @Override
     public void evaluate() {
-
+        // Get the domain for the current quantifier
         List<TAConstant> domainList = domain.getList();
 
-        for(TAConstant constant: domainList){
-
-            if(quantifier.getValue() == constant.getValue() && formula.getValue())
-                value_forall= true; //just added this because java requires a statement here
-
-            else {
+        // Begin evaluation
+        value_forall = true;
+        for (TAConstant constant: domainList) {
+            quantifier.setValue(constant.getValue());
+            formula.evaluate();
+            if (!formula.getValue()) {
                 value_forall = false;
                 break;
             }
         }
-
     }
 
     public ArrayList getOperands(){

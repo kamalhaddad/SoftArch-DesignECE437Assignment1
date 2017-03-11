@@ -29,5 +29,21 @@ Class Main is purely for testing purposes
        TAArrayAccess ai = new TAArrayAccess(a, one);
        ai.list();
 
+       TADomain domain = new TADomain(new TAConstant(1), new TAConstant(2), new TAConstant(3));
+       TAInt quantifier = new TAInt("quantifer");
+       TAInt var = new TAInt("dummy");
+       TALessThan formula = new TALessThan(quantifier, var);
+
+       // Testing if the domain: {1,2,3} has all values less than 4 i.e. true
+       var.set(4);
+       TAForAll forAll = new TAForAll(quantifier, domain, formula);
+       forAll.evaluate();
+       System.out.println(forAll.getValue());
+
+       // Testing if the domain: {1,2,3} has any values less than 0 i.e. false
+       var.set(0);
+       TAThereExists thereExists = new TAThereExists(quantifier, domain, formula);
+       thereExists.evaluate();
+       System.out.println(thereExists.getValue());
     }
 }

@@ -29,6 +29,8 @@ public class TABool implements TAPrimitive {
         return value_boolean;
     }
 
+    public void setValue(Object o) { this.value_boolean = (boolean) o; }
+
     public void evaluate(){
 
     }

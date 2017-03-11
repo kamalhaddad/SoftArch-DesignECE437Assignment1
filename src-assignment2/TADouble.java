@@ -3,7 +3,7 @@ import java.util.ArrayList;
 /*
 Type Abstraction for double data type
 */
-public class TADouble implements TANumber{
+public class TADouble implements TANumber, TAPrimitive {
 
     private double value_double;
     private String name = null;
@@ -29,6 +29,10 @@ public class TADouble implements TANumber{
     public Double getValue(){
 
         return value_double;
+    }
+
+    public void setValue(Object o) {
+        this.value_double = (double) o;
     }
 
     @Override

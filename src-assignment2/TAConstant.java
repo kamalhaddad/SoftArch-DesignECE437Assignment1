@@ -3,7 +3,7 @@ import java.util.ArrayList;
 /*
 Type abstraction for a constant(integer or double)
 */
-public class TAConstant implements TANumber {
+public class TAConstant implements TANumber, TAPrimitive {
 
     private final Number value;
     private String name = null;
@@ -33,6 +33,9 @@ public class TAConstant implements TANumber {
             System.out.print("( "+value+ " )");
         else
             System.out.print(name);
+    }
+
+    public void setValue(Object o) {
     }
 
     public Number getValue() {

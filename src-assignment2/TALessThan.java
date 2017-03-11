@@ -67,8 +67,10 @@ public class TALessThan extends TABool implements TAFormula {
 
     public ArrayList getOperands(){
         ArrayList opList = new ArrayList();
-        opList.addAll(operand1.getOperands());
-        opList.addAll(operand2.getOperands());
+//        opList.addAll(operand1.getOperands());
+//        opList.addAll(operand2.getOperands());
+        opList.add(operand1);
+        opList.add(operand2);
         return opList;
     }
 

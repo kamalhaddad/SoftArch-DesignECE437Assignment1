@@ -21,7 +21,7 @@ public class TAThereExists implements TAFormula {
     public TAThereExists(TAPrimitive x, TADomain domain, TAFormula formula) throws Exception {
 
         //DomainChecker.check(x.getName()); //Checks if x has already been set a domain previously
-        ArrayList opList = this.getOperands();
+        ArrayList opList = formula.getOperands();
 
         if(!opList.contains(x))
             throw new Exception("variable " + x.getName() +" not in formula");
@@ -60,14 +60,19 @@ public class TAThereExists implements TAFormula {
      * Else will evaluate to false
      */
     @Override
-    public void evaluate() { //Should we return a boolean here? Or should we store it in value_exists?
-
+    public void evaluate() {
+        // Get the domain for the current quantifier
         List<TAConstant> domainList = domain.getList();
-        value_exists = false;
 
-        for(TAConstant constant: domainList){
-            if(quantifier.getValue() == constant.getValue() && formula.getValue())
+        // Begin evaluation
+        value_exists = false;
+        for (TAConstant constant: domainList) {
+            quantifier.setValue(constant.getValue());
+            formula.evaluate();
+            if (formula.getValue()) {
                 value_exists = true;
+                break;
+            }
         }
     }
 
