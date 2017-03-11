@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import static java.lang.StrictMath.ceil;
 /*
 Type Abstraction for ceiling operation
@@ -41,6 +43,12 @@ public class TACeiling extends TAInt implements TATerm {
 
         else
             System.out.print(name);
+    }
+
+    public ArrayList getOperands(){
+        ArrayList opList = new ArrayList();
+        opList.add(operand.getOperands());
+        return opList;
     }
 
 }

@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /*
 Type abstraction for addition operation
 */
@@ -78,5 +80,12 @@ public class TAPlus implements TANumber, TATerm {
 
         else
             System.out.print(name);
+    }
+
+    public ArrayList getOperands(){
+        ArrayList opList = new ArrayList();
+        opList.addAll(operand1.getOperands());
+        opList.addAll(operand2.getOperands());
+        return opList;
     }
 }

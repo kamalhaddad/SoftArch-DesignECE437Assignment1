@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /*
 Type Abstraction for double data type
 */
@@ -41,6 +43,12 @@ public class TADouble implements TANumber{
 
         else
             System.out.print(name);
+    }
+
+    public ArrayList getOperands(){
+        ArrayList opList = new ArrayList();
+        opList.add(this);
+        return opList;
     }
 
 }

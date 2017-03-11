@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,10 +20,16 @@ public class TAThereExists implements TAFormula {
      */
     public TAThereExists(TAPrimitive x, TADomain domain, TAFormula formula) throws Exception {
 
-        DomainChecker.check(x.getName()); //Checks if x has already been set a domain previously
+        //DomainChecker.check(x.getName()); //Checks if x has already been set a domain previously
+        ArrayList opList = this.getOperands();
+
+        if(!opList.contains(x))
+            throw new Exception("variable " + x.getName() +" not in formula");
+
         this.quantifier = x;
         this.domain = domain;
         this.formula = formula;
+
     }
 
     @Override
@@ -56,13 +63,17 @@ public class TAThereExists implements TAFormula {
     public void evaluate() { //Should we return a boolean here? Or should we store it in value_exists?
 
         List<TAConstant> domainList = domain.getList();
+        value_exists = false;
 
         for(TAConstant constant: domainList){
             if(quantifier.getValue() == constant.getValue() && formula.getValue())
-                value_exists = true; //just added this because java requires a statement here
-                //return true;
+                value_exists = true;
         }
+    }
 
-        //return false;
+    public ArrayList getOperands(){
+        ArrayList opList = new ArrayList();
+        opList.addAll(formula.getOperands());
+        return opList;
     }
 }

@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /*
 Type Abstraction for pairs of data types
 */
@@ -43,6 +45,8 @@ public class TAPair implements TADataType{
             System.out.print(" ) ");
         }
     }
+
+
 
 
 

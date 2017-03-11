@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /*
 Type Abstraction for integers
 */
@@ -36,6 +38,12 @@ public class TAInt implements TANumber{
 
     public TAInt type(){
             return new TAInt();
+    }
+
+    public ArrayList getOperands(){
+        ArrayList opList = new ArrayList();
+        opList.add(this);
+        return opList;
     }
 
 }

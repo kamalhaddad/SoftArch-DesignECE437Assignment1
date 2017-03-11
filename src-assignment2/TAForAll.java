@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,7 +20,13 @@ public class TAForAll implements TAFormula {
      */
     public TAForAll(TAPrimitive x, TADomain domain, TAFormula formula) throws Exception {
 
-        DomainChecker.check(x.getName());
+        //DomainChecker.check(x.getName()); Needs fixing
+
+        ArrayList opList = this.getOperands();
+
+        if(!opList.contains(x))
+            throw new Exception("variable " + x.getName() +" not in formula");
+
         this.quantifier = x;
         this.domain = domain;
         this.formula = formula;
@@ -68,5 +75,11 @@ public class TAForAll implements TAFormula {
             }
         }
 
+    }
+
+    public ArrayList getOperands(){
+        ArrayList opList = new ArrayList();
+        opList.addAll(formula.getOperands());
+        return opList;
     }
 }

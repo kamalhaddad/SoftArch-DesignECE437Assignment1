@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /*
 Type Abstraction for multiplication operation
 */
@@ -67,5 +69,12 @@ public class TAMultiply implements TANumber, TATerm {
 
         else
             System.out.print(name);
+    }
+
+    public ArrayList getOperands(){
+        ArrayList opList = new ArrayList();
+        opList.addAll(operand1.getOperands());
+        opList.addAll(operand2.getOperands());
+        return opList;
     }
 }

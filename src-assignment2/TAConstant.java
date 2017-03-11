@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /*
 Type abstraction for a constant(integer or double)
 */
@@ -35,5 +37,15 @@ public class TAConstant implements TANumber {
 
     public Number getValue() {
         return value;
+    }
+
+    public ArrayList getOperands(){
+        ArrayList opList = new ArrayList();
+        opList.add(this);
+        return opList;
+    }
+
+    public String getName(){
+        return name;
     }
 }

@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /*
 Type Abstraction for minus operation as was as the negation operator
 */
@@ -26,7 +28,7 @@ public class TAMinus implements TANumber, TATerm {
 
     TAMinus(TADouble a, TADouble b){
 
-        flag = false;
+        flag = true;
         operand1 = a;
         operand2 = b;
 
@@ -36,7 +38,7 @@ public class TAMinus implements TANumber, TATerm {
 
         NamesChecker.check(s);
         name = s;
-        flag = false;
+        flag = true;
         operand1 = a;
         operand2 = b;
 
@@ -82,7 +84,7 @@ public class TAMinus implements TANumber, TATerm {
 
     @Override
     public String getName() {
-        return null;
+        return name;
     }
 
     public void evaluate(){
@@ -110,6 +112,16 @@ public class TAMinus implements TANumber, TATerm {
 
         else
             System.out.print(name);
+    }
+
+    public ArrayList getOperands(){
+        ArrayList opList = new ArrayList();
+        opList.addAll(operand1.getOperands());
+
+        if(flag)
+            opList.addAll(operand2.getOperands());
+
+        return opList;
     }
 
 

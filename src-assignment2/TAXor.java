@@ -1,3 +1,6 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 /*
 Type Abstraction for xor operator
 */
@@ -46,5 +49,12 @@ public class TAXor extends TABool implements TAFormula {
     public void printState(){
         System.out.println(value_xor);
 
+    }
+
+    public ArrayList getOperands(){
+        ArrayList opList = new ArrayList();
+        opList.addAll(operand1.getOperands());
+        opList.addAll(operand2.getOperands());
+        return opList;
     }
 }

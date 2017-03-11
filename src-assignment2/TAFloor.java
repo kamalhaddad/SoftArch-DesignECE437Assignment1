@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import static java.lang.StrictMath.floor;
 /*
 Type Abstraction for floor operation
@@ -38,5 +40,11 @@ public class TAFloor extends TAInt implements TATerm {
         }
         else
             System.out.print(name);
+    }
+
+    public ArrayList getOperands(){
+        ArrayList opList = new ArrayList();
+        opList.addAll(operand.getOperands());
+        return opList;
     }
 }

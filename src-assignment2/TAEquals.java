@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /*
 Type Abstraction for equals boolean operation
  */
@@ -58,6 +60,13 @@ public class TAEquals extends TABool implements TAFormula {
         else
             System.out.print(name);
 
+    }
+
+    public ArrayList getOperands(){
+        ArrayList opList = new ArrayList();
+        opList.addAll(operand1.getOperands());
+        opList.addAll(operand2.getOperands());
+        return opList;
     }
 
 }

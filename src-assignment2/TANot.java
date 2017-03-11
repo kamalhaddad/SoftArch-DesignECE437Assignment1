@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /*
 Type Abstraction for Not Boolean operator
 */
@@ -40,5 +42,11 @@ public class TANot extends TABool implements TAFormula {
     public void printState(){
         System.out.println(value_not);
 
+    }
+
+    public ArrayList getOperands(){
+        ArrayList opList = new ArrayList();
+        opList.add(operand.getOperands());
+        return opList;
     }
 }

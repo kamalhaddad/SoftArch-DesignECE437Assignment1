@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /*
 Type Abstraction for Boolean data type
 */
@@ -42,6 +44,12 @@ public class TABool implements TAPrimitive {
     public void printState(){
         System.out.println(value_boolean);
 
+    }
+
+    public ArrayList getOperands(){
+        ArrayList opList = new ArrayList();
+        opList.add(this);
+        return opList;
     }
 
 }
