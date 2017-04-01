@@ -48,9 +48,9 @@ Class Main is purely for testing purposes
        TAAnd e3 = new TAAnd(b, c);
        // If for every int x in the domain {1,2,3} such that x < 4 i.e. true
        // formula should be executed i.e. should print true
-       TAConditional myIf = new TAConditional(forAll, formula, e3);
-       myIf.evaluate();
-       System.out.println(myIf.getValue());
+//       TAConditional myIf = new TAConditional(forAll, formula, e3);
+//       myIf.evaluate();
+//       System.out.println(myIf.getValue());
 
        // Testing if the domain: {1,2,3} has any values less than 0 i.e. false
        var.set(0);
@@ -60,8 +60,8 @@ Class Main is purely for testing purposes
 
        // If there exists an int in the domain {1,2,3} such that x < 0 i.e. false
        // e3 should be executed i.e. should print false
-       myIf = new TAConditional(thereExists, formula, e3);
-       myIf.evaluate();
-       System.out.println(myIf.getValue());
+//       myIf = new TAConditional(thereExists, formula, e3);
+//       myIf.evaluate();
+//       System.out.println(myIf.getValue());
     }
 }
