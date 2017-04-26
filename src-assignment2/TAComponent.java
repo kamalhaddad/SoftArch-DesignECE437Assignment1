@@ -24,17 +24,15 @@ public class TAComponent implements TAObject {
         transitions.add(transition);
     }
 
-    public  void evaluate() {
+    public void evaluate() {
         while (true)
-            for (TATransition transition : transitions)
-                if (transition.getFrom() == currentState) {
-                    TAFormula guard = transition.getLabel().getGuard();
-                    guard.evaluate();
-                    if (guard.getValue()) {
-                        currentState = transition.getTo();
-                        break;
-                    }
+            for (TAPort port : ports) {
+                TATransition transition= isPortReady(port);
+                if (transition != null) {
+                    currentState = transition.getTo();
+                    return;
                 }
+            }
     }
 
     public TAComponent clone() { return null; }
@@ -58,11 +56,27 @@ public class TAComponent implements TAObject {
         System.out.println(names.toString());
     }
 
+    // if port is ready it will return its transition
+    public TATransition isPortReady(TAPort port) {
+        if (!ports.contains(port))
+            return null;
+
+        for (TATransition transition : transitions) {
+            if (transition.getFrom() == currentState) {
+                TATransitionLabel ithLabel = transition.getLabel();
+                if (ithLabel.getPort() != port.id) continue;
+
+                TAFormula guard = ithLabel.getGuard();
+                guard.evaluate();
+                if (guard.getValue()) {
+                    return transition;
+                }
+            }
+        }
+        return null;
+    }
+
     public boolean addState(TAState state) { return states.add(state); }
     public boolean addPort(TAPort port) { return ports.add(port); }
     public void addTransition(TATransition transition) { transitions.add(transition); }
-    public boolean isPortReady() { return false; }
-
-
-
 }
