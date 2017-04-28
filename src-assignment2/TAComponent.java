@@ -15,6 +15,18 @@ public class TAComponent implements TAObject {
         this.ports = ports;
     }
 
+    private TAComponent(TAState initState,
+                        Set<TAState> states,
+                        Set<TAPort> ports,
+                        Set<TATransition> transitions,
+                        Set<TATransitionLabel> labels) {
+        this.currentState = initState;
+        this.states = states;
+        this.ports = ports;
+        this.transitions = transitions;
+        this.transitionLabels = labels;
+    }
+
     public void addTransitionLabel(TATransitionLabel transitionLabel) {
         transitionLabels.add(transitionLabel);
     }
@@ -27,7 +39,7 @@ public class TAComponent implements TAObject {
     public void evaluate() {
         while (true)
             for (TAPort port : ports) {
-                TATransition transition= isPortReady(port);
+                TATransition transition = getPortTransition(port);
                 if (transition != null) {
                     currentState = transition.getTo();
                     return;
@@ -35,7 +47,7 @@ public class TAComponent implements TAObject {
             }
     }
 
-    public TAComponent clone() { return null; }
+    public TAComponent clone() { return new TAComponent(currentState, states, ports, transitions, transitionLabels); }
 
     public void list() {
         System.out.print("Component with states:" + states.toString());
@@ -57,7 +69,7 @@ public class TAComponent implements TAObject {
     }
 
     // if port is ready it will return its transition
-    public TATransition isPortReady(TAPort port) {
+    public TATransition getPortTransition(TAPort port) {
         if (!ports.contains(port))
             return null;
 

@@ -1,6 +1,5 @@
-/**
- * Created by Abbas on 14/03/2017.
- */
+import java.util.Set;
+
 public abstract class TAList implements TAStatement {
     protected TAAtomic atomic;
     protected TAStatement statement;
