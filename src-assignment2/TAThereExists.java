@@ -45,12 +45,12 @@ public class TAThereExists implements TAFormula {
 
     @Override
     public void list() {
-
         System.out.print("There exists at least one ");
         quantifier.list();
         System.out.print(" in ");
         domain.list(); //need to figure out how to implement this
         formula.list();
+        System.out.println();
     }
 
     /*

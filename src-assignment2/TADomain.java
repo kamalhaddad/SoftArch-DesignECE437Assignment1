@@ -23,6 +23,6 @@ public class TADomain implements TAObject {
     }
 
     public void list() {
-        System.out.println  (domain.toString());
+        for (TAConstant cte : domain) cte.list();
     }
 }

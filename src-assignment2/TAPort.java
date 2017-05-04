@@ -9,4 +9,8 @@ public class TAPort implements TAObject {
         this.name = name;
         this.id = id;
     }
+
+    public String toString() {
+        return name + ":" + id;
+    }
 }

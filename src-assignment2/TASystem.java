@@ -38,10 +38,9 @@ public class TASystem implements TAObject {
 
     public boolean deadlockCheck() {
         for (TAInteraction interaction : interactionSet) {
-            if (interaction.readyCheck())
-                return true;
+            if (interaction.readyCheck()) return false;
         }
-        return false;
+        return true;
     }
 
     public void list() {
@@ -78,6 +77,7 @@ public class TASystem implements TAObject {
         TAConcurrent interactionsHead;
         for (TAInteraction interaction : readyInteractions) {
             getNonConflicting(readyInteractions);
+            System.out.println("Executing: " + interaction.toString());
         }
     }
 

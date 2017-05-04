@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Set;
 
 public class TAComponent implements TAObject {
@@ -12,10 +13,13 @@ public class TAComponent implements TAObject {
     public TAComponent(TAState initState, Set<TAState> states, Set<TAPort> ports) {
         this.currentState = initState;
         this.states = states;
+        states.add(currentState);
         this.ports = ports;
+        this.transitions = new HashSet<>();
+        this.transitionLabels = new HashSet<>();
     }
 
-    private TAComponent(TAState initState,
+    public TAComponent(TAState initState,
                         Set<TAState> states,
                         Set<TAPort> ports,
                         Set<TATransition> transitions,
@@ -76,7 +80,7 @@ public class TAComponent implements TAObject {
         for (TATransition transition : transitions) {
             if (transition.getFrom() == currentState) {
                 TATransitionLabel ithLabel = transition.getLabel();
-                if (ithLabel.getPort() != port.id) continue;
+                if (ithLabel == null || ithLabel.getPortId() != port.id) continue;
 
                 TAFormula guard = ithLabel.getGuard();
                 guard.evaluate();
@@ -89,6 +93,8 @@ public class TAComponent implements TAObject {
     }
 
     public boolean addState(TAState state) { return states.add(state); }
+
     public boolean addPort(TAPort port) { return ports.add(port); }
+
     public void addTransition(TATransition transition) { transitions.add(transition); }
 }

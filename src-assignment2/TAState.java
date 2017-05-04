@@ -11,6 +11,6 @@ public class TAState implements TAObject {
     }
 
     public String toString() {
-        return name + id;
+        return name + ":" + id;
     }
 }
